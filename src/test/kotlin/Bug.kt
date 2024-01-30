@@ -48,10 +48,9 @@ class Bug {
     /**
      * This tests creates two Shops with the same ShopType
      */
-    private fun setup(): String {
+    private fun setup(){
         val entityManager = entityManagerFactory.createEntityManager()
         entityManager.transaction.begin()
-        val franchiseType = "HIBERNATE"
         val shopType1 = ShopType()
         entityManager.persist(shopType1)
         val shopType2 = ShopType()
@@ -64,6 +63,5 @@ class Bug {
         )
         entityManager.transaction.commit()
         entityManager.close()
-        return franchiseType
     }
 }
