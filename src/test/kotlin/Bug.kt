@@ -23,7 +23,7 @@ class Bug {
     }
 
     @Test
-    fun `WHEN counting statistics THEN they work`(){
+    fun `WHEN counting statistics THEN they are correct`(){
         setup()
         val entityManager = entityManagerFactory.createEntityManager()
         val statistics = entityManager.unwrap(Session::class.java).sessionFactory.statistics
